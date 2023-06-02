@@ -6,32 +6,67 @@ var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '}', '[', ']', '|', ':', ';', '<', '>', '.', '?', '/'];
 
-var combined = [];
 
 
 
-function responses(){
+
+function getUserInput() {
 
   var amount = Number(prompt('Please provide an amount characters.'));
 
-  var includeLowercase = confirm ('Click OK to include lowercase letters, if not click cancel');
-  var includeUppercase = confirm ('Click OK to include uppercase letters, if not click cancel');
-  var includeNumbers = confirm ('Click OK to include lowercase numbers, if not click cancel');
-  var includeSpecial = confirm ('Click OK to include special characters, if not click cancel');
+  var includeLowercase = confirm('Click OK to include lowercase letters, if not click cancel');
+  var includeUppercase = confirm('Click OK to include uppercase letters, if not click cancel');
+  var includeNumbers = confirm('Click OK to include lowercase numbers, if not click cancel');
+  var includeSpecial = confirm('Click OK to include special characters, if not click cancel');
 
 
   console.log(amount, includeLowercase, includeUppercase, includeNumbers, includeSpecial);
 
 
-  return{amount, includeLowercase, includeUppercase, includeNumbers, includeSpecial};
+  return [amount, includeLowercase, includeUppercase, includeNumbers, includeSpecial];
+}
+
+var choices = getUserInput();
+
+function generatePass() {
+
+  // var combinedChars = [];
+  var password = '';
+
+  var includeLowercase = choices[1];
+  var includeUppercase = choices[2];
+  var includeNumbers = choices[3];
+  var includeSpecial = choices[4];
+  // var count = choices[0];
+  var combinedChars = [];
+
+
+  if (includeLowercase) {
+    combinedChars = combinedChars.concat(lowercase)
+  }
+
+  if (includeUppercase) {
+    combinedChars = combinedChars.concat(uppercase)
+  }
+
+  if (includeNumbers) {
+    combinedChars = combinedChars.concat(numbers)
+  }
+
+  if (includeSpecial) {
+    combinedChars = combinedChars.concat(specialCharacters)
+  }
+  console.log(combinedChars)
+  
 }
 
 
 
 
+generatePass()
 
 
-
+alert('Thank you for your input')
 
 
 
@@ -43,7 +78,7 @@ function writePassword() {
   passwordText.value = password;
 
 }
-function generatePassword( ) {
+function generatePassword() {
   return 'This is a test password'
 }
 // Add event listener to generate button
