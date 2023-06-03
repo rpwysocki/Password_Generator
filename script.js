@@ -16,7 +16,7 @@ function getUserInput() {
 
   var includeLowercase = confirm('Click OK to include lowercase letters, if not click cancel');
   var includeUppercase = confirm('Click OK to include uppercase letters, if not click cancel');
-  var includeNumbers = confirm('Click OK to include lowercase numbers, if not click cancel');
+  var includeNumbers = confirm('Click OK to include numbers, if not click cancel');
   var includeSpecial = confirm('Click OK to include special characters, if not click cancel');
 
 
