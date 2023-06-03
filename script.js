@@ -60,11 +60,23 @@ function generatePass() {
 
 }
 
+// for (var count = 0; count < choices[0]; count++) {
+//   var randomNum = Math.random();
+//   var randomIndex = Math.floor(randomNum * combinedChars.length);
+//   var randomChar = combinedChars[randomIndex];
 
+//   pass += randomChar;
+// }
+
+// return password;
 
 
 generatePass()
 
+// var password = generatePass();
+
+// console.log(pass);
+// what's missing here?
 
 alert('Thank you for your input')
 
