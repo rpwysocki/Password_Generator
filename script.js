@@ -42,22 +42,22 @@ function generatePass() {
 
 
   if (includeLowercase) {
-    combinedChars = combinedChars.concat(lowercase)
+    combinedChars = combinedChars.concat(lowercase);
   }
 
   if (includeUppercase) {
-    combinedChars = combinedChars.concat(uppercase)
+    combinedChars = combinedChars.concat(uppercase);
   }
 
   if (includeNumbers) {
-    combinedChars = combinedChars.concat(numbers)
+    combinedChars = combinedChars.concat(numbers);
   }
 
   if (includeSpecial) {
-    combinedChars = combinedChars.concat(specialCharacters)
+    combinedChars = combinedChars.concat(specialCharacters);
   }
-  console.log(combinedChars)
-  
+  console.log(combinedChars);
+
 }
 
 
