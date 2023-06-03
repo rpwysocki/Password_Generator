@@ -7,3 +7,5 @@ FOR loop is incorrect and returning errors in console log
 https://rpwysocki.github.io/Password_Generator/
 
 [Page Screenshot](./Screenshot/Passwrod.jpg)
+
+Worked out some of the problems

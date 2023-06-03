@@ -31,13 +31,14 @@ var choices = getUserInput();
 function generatePass() {
 
   // var combinedChars = [];
-  var password = '';
+  var pass = '';
 
+  var charAmount = choices[0];
   var includeLowercase = choices[1];
   var includeUppercase = choices[2];
   var includeNumbers = choices[3];
   var includeSpecial = choices[4];
-  // var count = choices[0];
+
   var combinedChars = [];
 
 
@@ -58,24 +59,24 @@ function generatePass() {
   }
   console.log(combinedChars);
 
+
+
+for (var count = 0; count < charAmount; count++) {
+  var randomNum = Math.random();
+  var randomIndex = Math.floor(randomNum * combinedChars.length);
+  var randomChar = combinedChars[randomIndex];
+
+  pass += randomChar;
 }
 
-// for (var count = 0; count < choices[0]; count++) {
-//   var randomNum = Math.random();
-//   var randomIndex = Math.floor(randomNum * combinedChars.length);
-//   var randomChar = combinedChars[randomIndex];
+return pass;
+}
 
-//   pass += randomChar;
-// }
+// generatePass()
 
-// return password;
+var password = generatePass();
 
-
-generatePass()
-
-// var password = generatePass();
-
-// console.log(pass);
+console.log(password);
 // what's missing here?
 
 alert('Thank you for your input')
@@ -91,7 +92,7 @@ function writePassword() {
 
 }
 function generatePassword() {
-  return 'This is a test password'
+  return password
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
