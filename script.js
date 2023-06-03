@@ -12,7 +12,7 @@ var specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', 
 
 function getUserInput() {
 
-  var amount = Number(prompt('Please provide an amount characters.'));
+  var amount = Number(prompt('Please provide the amount characters you would like in the password.'));
 
   var includeLowercase = confirm('Click OK to include lowercase letters, if not click cancel');
   var includeUppercase = confirm('Click OK to include uppercase letters, if not click cancel');
